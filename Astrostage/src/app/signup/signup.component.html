@@ -1,1 +1,27 @@
-<p>signup works!</p>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-5">A</div>
+        
+            <div class="col-5 d-flex flex-column align-item-center bg-info" [formGroup]="fbFormGroup" style="height: 65vh;">
+            <div>
+                <label class="input">Username</label>
+                <input class="form-control-sm" type="text" for="input" placeholder="Enter UserName..." formControlName = "username" >
+            </div>
+            <div class="mt-1">
+                <label for="password">Password</label>
+                <input class="form-control-sm ml-1" type="password" id="password" placeholder="Enter Password" formControlName="password">
+
+            </div>
+            <div class="mt-1">
+                <label for="email">Email</label>
+                <input class="form-control-sm" type="text" id="email" placeholder="enter Email ID" formControlName="email">
+            </div>
+            <div class="mt-1">
+                <label for="number">Mobile NO</label>
+                <input class="form-control-sm" type="text" id="number" placeholder="Enter Mobile Number" formControlName="mobile">
+            </div>
+            <button class="btn btn-sm btn-primary" (click)= "registerHere()" [disabled]="!fbFormGroup.valid">SignUp</button>
+        <a routerLink="/login">Login Here</a>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,23 @@
-<p>login works!</p>
+<div class="container-fluid">
+    <div class="row bg-warning h1" style="height: 20vh;">AStroSage.com</div>
+</div>
+<div class="container">
+    <div class="row bg-info align-items-center justify-content-center">
+        <div class="col-6" [formGroup]="fbFormGroup">
+            <div>LogIn</div>
+            <div class="mt-1">
+                <label for="name">Username</label>
+                <input type="text" id="name" class="form-control" formControlName="username" placeholder="Enter Username"/>
+
+            </div>
+            <div class="mt-1">
+                <label for="pass">Password</label>
+                <input type="text" id="pass" placeholder="Enter Password" class="form-control" formControlName="password"/>
+            </div>
+            <button class="btn btn-sm btn-warning mt-2 mb-2" [disabled]="!fbFormGroup.valid"
+            (click)="loginProcessHere()">Login</button>
+
+            <a routerLink="/signup">Signup Here</a>
+        </div>
+    </div>
+</div>
