@@ -6,7 +6,7 @@ Promise.promisifyAll(require("mysql/lib/Pool").prototype);
 
 const DB_CONFIG = {
   host: "127.0.0.1",
-  user: "mysql",
+  user: "root",
   password: "",
   database: "REGISTER"
 };
@@ -16,7 +16,7 @@ let addUser = async (input) => {
   await connection.connectAsync();
 
   let sql =
-    "INSERT INTO USER (USERNAME, PASSWORD, EMAIL, MOBILE) VALUES (?, ?, ?, ?)";
+    "INSERT INTO USER (USERNAME, PASSWORD, EMAIL, MOBILE) VALUES ( ?, ?, ?, ?)";
   await connection.queryAsync(sql, [
     input.username,
     input.password,

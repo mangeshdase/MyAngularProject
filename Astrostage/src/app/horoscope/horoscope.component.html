@@ -1,1 +1,14 @@
-<p>horoscope works!</p>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of list">
+            <div class=" col-4 my-3" *ngIf="item.show">
+                <h5>{{item.title}}</h5>
+                <div>{{item.desc}}</div>
+                <button class="btn btn-outline-light" (click)="showDetailsModal(item)">
+                    Show Details
+                </button>
+            </div>
+
+        </ng-container>
+    </div>
+</div>

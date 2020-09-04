@@ -1,1 +1,21 @@
-<p>home works!</p>
+<div class="container-fluid"><!--style="background:url(assets/homebac.jpg); no-repeat; background-size: cover; height: 100vh;">-->
+    <div class="row bg-dark sticky-top text-warning">
+        <div class="col h3 text-warning d-flex align-items-center"  > 
+            <div class="h1 ml-4 mr-4 mt-2">
+            <fa-icon [icon]="faCentos"></fa-icon>
+            </div>
+            <div class="ml-2">
+            AStroSage.com
+            </div>
+        </div>
+        <div class="col d-flex justify-content-end align-items-center" style="font-family: cursive;">
+            <div  class="btn text-warning btn-outline-light mr-4" routerLink="/home/horoscope">HOROSCOPE</div>
+            <div  class="btn text-warning btn-outline-light mr-4" routerLink="/home/astrology">ASTROLOGY</div>
+            <div  class="btn text-warning btn-outline-light mr-4" routerLink="/home/aboutus">ABOUTUS</div>
+            <div  class="btn text-warning btn-outline-light mr-4" routerLink="/home/contactus">CONTACTUS</div>
+            <div  class="btn text-warning btn-outline-light mr-4" (click)="processLogout()">LOGOUT</div>
+        </div>
+    </div>
+    
+    <router-outlet></router-outlet>
+    </div>

@@ -1,4 +1,4 @@
-let userregistration = () => {
+let userregistration = async() => {
     let username = document.querySelector("#inp").value;
     let password = document.querySelector("#pas").value;
     let email = document.querySelector("#email").value;
@@ -10,18 +10,14 @@ let userregistration = () => {
     }
 
     let url =`http://localhost:3000/adduser?username=${username}&password=${password}&email=${email}&mobile=${mobile}`;
+console.log(url);
 
-    let xhr = new XMLHttpRequest();
-    xhr.open("GET", url);
-    xhr.onload = () => {
-        const res = xhr.responseText;
-        console.log(res);
+ await fetch(url);
+
+
 
         document.querySelector("#inp").value="";
         document.querySelector("#pas").value="";
         document.querySelector("#email").value="";
         document.querySelector("#number").value="";
-
-    };
-    xhr.send();
 };

@@ -12,7 +12,7 @@ const routes: Routes = [
   { path : 'signup', component : SignupComponent },
   { path : 'login', component :  LoginComponent },
   { path : 'home', component : HomeComponent, children :[
-    { path : '', component : HomeComponent },
+    { path : '', component : HoroscopeComponent },
     { path :'aboutus', component : AboutusComponent },
     { path :'contactus', component : ContactusComponent },
     { path :'horoscope', component : HoroscopeComponent },
