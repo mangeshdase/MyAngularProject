@@ -1,6 +1,18 @@
-<!-- <div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-5">A</div>
+<div class="container-fluid">
+  <div class="row bg-dark text-warning h1 align-items-center" style="height: 10vh;">
+      <div class="ml-4 mr-4"><fa-icon [icon]="faCentos"></fa-icon></div>
+      <div>
+       AStroSage.com
+      </div>
+      </div>
+</div>
+ <div class="container-fluid">
+    <div class="row justify-content-center" style="height: 100vh;">
+        <div class="col-5 bg-dark">
+          <div>Welcome to AStroSage</div>
+          <img class="img-responsive" src="assets/wp5152451.jpg" style="width: 100%;">
+
+        </div>
         
             <div class="col-5 d-flex flex-column align-item-center bg-info" [formGroup]="fbFormGroup" style="height: 65vh;">
             <div>
@@ -24,86 +36,81 @@
         <a routerLink="/login">Login Here</a>
         </div>
     </div>
-</div> -->
-
-
-<div class="container-fluid" style="justify-content: center;display: flex;height: 100vh;
-background:url(https://picsum.photos/seed/picsum/200/300);
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;">
-    
-    
-    <div class="row " style="display: flex; justify-content: center;height: 100vh; width: 100vh;">
-        <div class="col-12 col-md-8" style="border: 1px solid;border-color: white;border-width: 3px;border-radius: 12px;border-style: outset;">
-            <h1 style="display: flex; justify-content: center;">Registration</h1>
-            <div style="margin-left: 60px;">
-
-            <h4 style="margin-left: 60px;">First Name</h4>
-            <div style="margin-right: 50px;">
-            <div class="input-group flex-nowrap" >
-                <div class="input-group-prepend" >
-                  <span class="input-group-text" id="addon-wrapping" >@</span>
-                </div>
-                <input type="text" class="form-control" placeholder="First Name" aria-label="Username" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-
-             <h4 style="margin-left: 60px;">Last Name</h4>
-             <div style="margin-right: 50px;">
-             <div class="input-group flex-nowrap" style="margin-right: 60px;"
-             >
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="addon-wrapping">@</span>
-                </div>
-                <input type="text" class="form-control" placeholder="Last Name" aria-label="Username" aria-describedby="addon-wrapping">
-              </div>
-              </div>
-
-             <h4 style="margin-left: 60px;">Username</h4>
-             <div style="margin-right: 50px;">
-             <div class="input-group flex-nowrap" style="margin-right: 60px;">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="addon-wrapping">@</span>
-                </div>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-              </div>
-              </div>
-
-             <h4 style="margin-left: 60px;">Password</h4>
-             <div style="margin-right: 50px;">
-             <div class="input-group flex-nowrap" style="margin-right: 60px;">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="addon-wrapping">@</span>
-                </div>
-                <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping">
-              </div>
-              </div>
-
-              <h4 style="margin-left: 80px;">Email</h4>
-              <div style="margin-right: 50px;">
-              <div class="form-group" >
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" >
-                
-            </div>
-            </div>
+</div>
+<!--<div class="container">
+  <div class="row">
+  <div class="col-md-4 offset-md-4">
+  <form [formGroup]="fbFormGroup" (ngSubmit)="signup();">
+  <div class="formbox">
    
-               <h4 style="margin-left: 60px;">Mobile No.</h4>
-               <div style="margin-right: 50px;">
-               <div class="input-group flex-nowrap" style="margin-right: 60px;">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="addon-wrapping">@</span>
-                </div>
-                <input type="text" class="form-control" placeholder="mobile No." aria-label="Username" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-        </div>
-              <div class="d-flex align-items-center justify-content-center" style="margin-top: 12px;">
-                <button class="btn btn-lg btn-secondary mr-1" (click)="registerHere()"[disabled]="!fbFormGroup.valid">submit
-                </button>
-                <a routerLink="/login">Login Here</a>
-            </div>
-        
+  <div class="form-group">
+  <input type="text" formControlName="fullname" class="form-control" placeholder="Full Name" [ngClass]="{ 'is-invalid': submitted && fval.fullName.errors }"/>
+   <div class="invalid-feedback">
+  <div *ngIf="fval.fullName.errors.required">
+  Full Name is required and must be a valid name
+  </div>
+</div>
+  </div>
+  <div class="form-group">
+    <input type="text" formControlName="username" class="form-control" placeholder="Username" [ngClass]="{ 'is-invalid': submitted && fval.fullName.errors }"/>
+<div *ngIf="submitted && fval.fullName.errors" class="invalid-feedback">
+    <div *ngIf="fval.fullName.errors.required">
+    Full Name is required and must be a valid name
     </div>
 
-</div>
+  </div>
+  </div>
+  <div class="form-group">
+  <input type="email" formControlName="email" class="form-control" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && fval.email.errors }" />
+<div *ngIf="submitted && fval.email.errors" class="invalid-feedback">
+  <div *ngIf="fval.email.errors.required">Email is required</div>
+  <div *ngIf="fval.email.errors.email">Enter a valid email address</div>
+  </div>
+  </div>
+   
+  <div class="form-group">
+  <input type="text" formControlName="mobile" class="form-control" placeholder="Mobile Number" maxlength="12" minlength="10" [ngClass]="{ 'is-invalid': submitted && fval.phone.invalid }" required />
+  <div *ngIf="submitted && fval.phone.errors" class="invalid-feedback">
+  <div *ngIf="fval.phone.errors.required">Phone is required</div>
+  </div>
+  </div>
+  <div class="form-group">
+  <input type="password" formControlName="password" class="form-control" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && fval.password.errors}" />
+  <!--<div *ngIf="submitted && fval.password.errors"class="invalid-feedback">
+  <div ngClass="fval.password.errors.required">
+  Password is required.
+  </div>
+  <div *ngIf="fval.password.errors.minlength">Password must be at least 6 characters</div>
+  </div>
+  </div>
+  <div class="form-group">
+  <input type="password" formControlName="confirmPassword" class="form-control" placeholder="Confirm Password"[ngClass]="{ 'is-invalid': submitted && fval.confirmPassword.errors }" appConfirmEqualValidator='password'/>
+  <div *ngIf="submitted && fval.confirmPassword.errors" class="invalid-feedback">
+  <div *ngIf="fval.confirmPassword.errors.required"
+  >Confirm password is required</div>
+  <div *ngIf="fval.confirmPassword.errors?.notEqual">Password Mismatch</div>
+  </div>
+   
+  </div>
+  <div class="form-group">
+  <div class="checkboxrow">
+  <input type="checkbox" class="form-check-input" id="tnc" formControlName="tnc" [ngClass]="{ 'is-invalid': submitted && fval.tnc.errors }">
+  <label for="tnc" class="form-check-label">Agree with terms and conditions</label>
+  <!--<div *ngIf="submitted && fval.tnc.errors" class="invalid-feedback">
+  <div>Please agree with terms and conditions</div>
+  </div>
+  </div>
+  </div>
+   
+  <div class="form-group">
+  <button type="btn" class="btn btn-primary"[disabled]="!fbFormGroup.valid"
+  (click)="registerHere()">Sign Up <span class="arrowbtn"><span
+  class="fa fa-arrow-right" ></span></span></button>
+  <a routerLink="/login">Login Here</a>
+  </div>
+  </div>
+  </form>
+  </div>
+  </div>
+  </div>
+-->

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import {faCentos} from '@fortawesome/free-brands-svg-icons';
 
 
 @Component({
@@ -10,6 +11,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  public faCentos = faCentos;
   public uiInvalidCredential = false;
   public fbFormGroup = this.fb.group({
     username : ['',Validators.required],

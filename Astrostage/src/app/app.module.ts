@@ -20,7 +20,8 @@ import { AstrologyComponent } from './astrology/astrology.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LogoutComponent } from './logout/logout.component';
-import { HoroscopedetailsComponent } from './horoscopedetails/horoscopedetails.component';  
+import { HoroscopedetailsComponent } from './horoscopedetails/horoscopedetails.component';
+import { ValidationDirective } from './validation.directive';  
 
 
 
@@ -37,7 +38,8 @@ import { HoroscopedetailsComponent } from './horoscopedetails/horoscopedetails.c
     AstrologyComponent,
     PageNotFoundComponent,
     LogoutComponent,
-    HoroscopedetailsComponent
+    HoroscopedetailsComponent,
+    ValidationDirective
   ],
   imports: [
     BrowserModule,

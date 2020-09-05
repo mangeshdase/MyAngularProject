@@ -8,7 +8,7 @@ const DB_CONFIG = {
   host: "127.0.0.1",
   user: "root",
   password: "",
-  database: "REGISTER"
+  database: "REGISTER",
 };
 
 let addUser = async (input) => {
@@ -16,12 +16,15 @@ let addUser = async (input) => {
   await connection.connectAsync();
 
   let sql =
-    "INSERT INTO USER (USERNAME, PASSWORD, EMAIL, MOBILE) VALUES ( ?, ?, ?, ?)";
+    "INSERT INTO USER (USERNAME,PASSWORD,EMAIL,MOBILE) VALUES ( ?, ?, ?, ?)";
   await connection.queryAsync(sql, [
+//    input.fullname,
     input.username,
     input.password,
     input.email,
     input.mobile,
+    input.password,
+  //  input.confirmpassword,
   ]);
 
   await connection.endAsync();
