@@ -23,7 +23,7 @@ let addUser = async (input) => {
     input.password,
     input.email,
     input.mobile,
-    input.password,
+   // input.password,
   //  input.confirmpassword,
   ]);
 
